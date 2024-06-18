@@ -1,0 +1,15 @@
+>>> from selenium import webdriver
+>>> from selenium.webdriver.chrome.service import Service
+>>> from webdriver_manager.chrome import ChromeDriverManager
+>>> from selenium.webdriver.common.by import By
+>>> from selenium.webdriver.common.keys import Keys
+>>> import time
+>>> from bs4 import BeautifulSoup
+>>> driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+
+# webdriver_manager를 사용하여 Chromedriver 설치 및 실행
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+# 원하는 웹 페이지로 이동
+driver.get('http://www.example.com')
